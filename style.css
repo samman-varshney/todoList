@@ -45,7 +45,7 @@ li{
 
 .back{
     z-index:-1000;
-    display : none;
+    /* display : none; */
 }
 
 .btn{

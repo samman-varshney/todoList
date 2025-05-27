@@ -11,6 +11,7 @@ function editTodo(li, btn){
     li.querySelector("input").value = li.querySelector("span").textContent;
     console.log(li.id);
     toggle(li);
+    li.querySelector("input").focus();
     console.log("editing the content....");
     btn.textContent = "Save";
     btn.onclick = ()=>saveTodo(li, btn);
