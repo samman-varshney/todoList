@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List | Organise Your Day</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.png" type="image/png" />
+
+</head>
+<body>
+   <div class="todo-list">
+    <div style="text-align: center;"><h1>Todo List</h1></div>
+ 
+    <div class="addTodo">
+        <input  onkeydown="check(event)" id="input-add" type="text">
+        <label for="input-add">
+            <button id="btn-add" onclick="addTodo()">Add to Todo List</button>
+        </label>
+    </div>
+    
+        <div class="list">
+            <ul>
+                
+            </ul>
+        </div>
+   </div> 
+    <script src="app.js"></script>
+</body>
+</html>
