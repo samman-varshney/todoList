@@ -10,11 +10,14 @@ function toggle(li){
 function editTodo(li, btn){
     li.querySelector("input").value = li.querySelector("span").textContent;
     console.log(li.id);
-    toggle(li);
     li.querySelector("input").focus();
+    toggle(li);
+    
     console.log("editing the content....");
     btn.textContent = "Save";
+    btn.style.backgroundColor = "rgb(27, 233, 9)"
     btn.onclick = ()=>saveTodo(li, btn);
+
 }
 
 function saveTodo(li, btn){
@@ -55,8 +58,8 @@ function component(item){
     li.innerHTML = `
     <span class="box">${item.content}</span>
     <input class="box back" type="text">
-    <button class="btn" onclick="editTodo(this.parentElement, this)">Edit</button>
-    <button class="btn" onclick="deleteTodo(this.parentElement)">Delete</button>
+    <button class="btn" style="background-color:rgb(40, 130, 233);" onclick="editTodo(this.parentElement, this)">Edit</button>
+    <button class="btn" style="background-color:rgb(247, 44, 21);" onclick="deleteTodo(this.parentElement)">Delete</button>
     `;
     li.id = item.id;
     return li;
